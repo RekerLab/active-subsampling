@@ -110,7 +110,7 @@ def al_subsampling_with_error(model, dataset, metric, error_rate, num_repeats, t
 		performances += [temp_perf]  # collect performance on test data
 		labels += [training_y]
 		psr_num = np.array(np.cumsum(training_y))[2:]
-		psr_den = np.arange(3, len(cumsum) + 1)
+		psr_den = np.arange(3, len(training_y) + 1)
 		positive_selection_ratios += [psr_num / psr_den] # collect percentage of selected positive data
 
 	return performances, positive_selection_ratios, molecules
