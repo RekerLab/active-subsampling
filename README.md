@@ -17,7 +17,7 @@ model = RF()
 metric = mcc
 ```
 
-Active learning subsampling can be directly called using the 
+Active learning subsampling can be directly called using the al_subsampling function
 ```
 # run active learning
 result = al_subsampling(model, bbbp, metric, 5 )
