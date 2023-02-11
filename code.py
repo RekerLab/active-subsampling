@@ -113,7 +113,7 @@ def al_subsampling_with_error(model, dataset, metric, error_rate, num_repeats, t
 		psr_den = np.arange(3, len(training_y) + 1)
 		positive_selection_ratios += [psr_num / psr_den] # collect percentage of selected positive data
 
-	return performances, positive_selection_ratios, molecules
+	return performances, positive_selection_ratios, molecules, labels
 
 def al_subsampling(model, dataset, metric, num_repeats, train_frac = 0.5, rand=False):
 	'''
@@ -203,9 +203,8 @@ def calc_significance_2samp(result):
 	tstatistic, pvalue = ttest_ind(AL_performance, full_performance)
 	return pvalue
 
-def subsample_data(model,dataset,metric,repeats):
-	# use active learning to subsample data and return a subsampled training set as a tuple (SMILES, labels)
-	result = al_subsampling(model, dataset, metric, repeats )
+def subsample_data(result):
+	# use active learning result to subsample data and return a subsampled training set as a tuple (SMILES, labels)
 	maxIter = calc_maxIter(result)
-	return (result[2][0][:calc_maxIter(result)], result[3][0][:calc_maxIter(result)])
+	return (result[2][0][:maxIter], result[3][0][:maxIter])
 
