@@ -209,30 +209,3 @@ def subsample_data(model,dataset,metric,repeats):
 	maxIter = calc_maxIter(result)
 	return (result[2][0][:calc_maxIter(result)], result[3][0][:calc_maxIter(result)])
 
-
-
-
-###################
-# run BBBP as example
-
-#load data
-tasks, data, transformers = dc.molnet.load_bbbp(splitter=None)
-bbbp = data[0]
-
-# initialize model and performance metric
-model = RF()
-metric = mcc
-
-# run active learning
-result = al_subsampling(model, bbbp, metric, 5 )
-
-# visualize learning curve (result[0] is all MCC values on validation set)
-pl.plot(np.mean(result[0],axis=0))
-pl.savefig("learning_curve.pdf")
-pl.close()
-
-# report deltaPerformance 
-print(calc_deltaPerformances(result))
-
-# extract AL subsample data
-subsample = subsample_data(model, data, metric, 5)
