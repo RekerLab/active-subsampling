@@ -1,6 +1,10 @@
 # Active Subsampling
 Using active learning for data curation.
 
+## Files
+- **code.py** contains all code and functions to run and evaluate active learning subsampling
+- **Example_workflow_for_AL_Subsampling.ipynb** contains an example notebook that runs BBBP but can be run out of the box on a local machine or on Google Colab to apply this technique to new datasets
+
 ## Quickstart
 
 Datasets can be loaded from DeepChem
