@@ -1,6 +1,6 @@
 # Active Subsampling
 Using active learning for data curation.
-![toc_graphic](https://user-images.githubusercontent.com/56095399/227727685-043c5ca6-27c8-4f7e-9565-fd146a1c31cf.png)
+![toc_graphic_white](https://user-images.githubusercontent.com/56095399/227727724-404e2bfb-fcd4-497d-bc77-3acff026ff2b.png)
 
 
 ## Files
