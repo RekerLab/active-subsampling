@@ -1,5 +1,7 @@
 # Active Subsampling
 Using active learning for data curation.
+![toc_graphic](https://user-images.githubusercontent.com/56095399/227727685-043c5ca6-27c8-4f7e-9565-fd146a1c31cf.png)
+
 
 ## Files
 - **code.py** contains all code and functions to run and evaluate active learning subsampling
