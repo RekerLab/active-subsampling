@@ -1,7 +1,9 @@
 # Active Subsampling
 **Improving Molecular Machine Learning Through Adaptive Subsampling with Active Learning**
 
+
 ![toc_graphic_white](https://user-images.githubusercontent.com/56095399/227727724-404e2bfb-fcd4-497d-bc77-3acff026ff2b.png)
+
 
 ## Overview
 We use active machine learning as an autonomous and adaptive data subsampling strategy and show that active learning-based subsampling can lead to better molecular machine learning performance when compared to both training models on the complete training data and 19 state-of-the-art subsampling strategies. We find that active learning is robust to errors in the data, highlighting the utility of this approach for low-quality datasets. Taken together, we here describe a new, adaptive machine learning pre-processing approach and provide novel insights into the behavior and robustness of active machine learning for molecular sciences.
@@ -12,12 +14,13 @@ If you use this data or code, please kindly cite: Wen, Y., Li, Z., Xiang, Y., & 
 
 <br>
 
+
 ## Files
 - **code.py** contains all code and functions to run and evaluate active learning subsampling
 - **Example_workflow_for_AL_Subsampling.ipynb** contains an example notebook that runs BBBP but can be run out of the box on a local machine or on Google Colab to apply this technique to new datasets
 
-<br>
 
+<br>
 
 ## Dependencies
 * [numpy](https://numpy.org/)
@@ -28,6 +31,7 @@ If you use this data or code, please kindly cite: Wen, Y., Li, Z., Xiang, Y., & 
 * [matplotlib](https://matplotlib.org/)
 
 <br>
+
 
 ## Quickstart
 
