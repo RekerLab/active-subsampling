@@ -24,7 +24,7 @@ If you use this data or code, please kindly cite: Wen, Y., Li, Z., Xiang, Y., & 
 
 ## Installation
 ```
-pip install git+https://github.com/RekerLab/active-subsampling
+pip install git+https://github.com/RekerLab/active-subsampling.git
 ```
 
 <br>
