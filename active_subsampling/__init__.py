@@ -3,6 +3,3 @@
 
 
 __version__ = '0.0.0'
-
-
-from .ALSubsampling import al_subsampling
