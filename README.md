@@ -16,19 +16,16 @@ If you use this data or code, please kindly cite: Wen, Y., Li, Z., Xiang, Y., & 
 <br>
 
 ## Files
-- **code.py** contains all code and functions to run and evaluate active learning subsampling
+
 - **Example_workflow_for_AL_Subsampling.ipynb** contains an example notebook that runs BBBP but can be run out of the box on a local machine or on Google Colab to apply this technique to new datasets
 
 <br>
 
 
-## Dependencies
-* [numpy](https://numpy.org/)
-* [scipy](https://scipy.org/)
-* [pandas](https://github.com/pandas-dev/pandas)
-* [scikit-learn](https://scikit-learn.org/stable/)
-* [deepchem](https://deepchem.io/)
-* [matplotlib](https://matplotlib.org/)
+## Installation
+```
+pip install git+https://github.com/RekerLab/active-subsampling
+```
 
 <br>
 
@@ -37,6 +34,7 @@ If you use this data or code, please kindly cite: Wen, Y., Li, Z., Xiang, Y., & 
 Datasets can be loaded from DeepChem
 ```
 #load data
+import deepchem as dc
 tasks, data, transformers = dc.molnet.load_bbbp(splitter=None)
 bbbp = data[0]
 ```
@@ -44,6 +42,8 @@ bbbp = data[0]
 Model and performance metric need to be initialized, we recommend random forest models and Matthew's correlation coefficient (MCC)
 ```
 # initialize model and performance metric
+from sklearn.metrics import matthews_corrcoef as mcc
+from sklearn.ensemble import RandomForestClassifier as RF
 model = RF()
 metric = mcc
 ```
@@ -51,7 +51,8 @@ metric = mcc
 Active learning subsampling can be directly called using the al_subsampling function
 ```
 # run active learning
-result = al_subsampling(model, bbbp, metric, 5 )
+from active_subsampling import ALSubsampling
+result = ALSubsampling.al_subsampling(model, bbbp, metric, 5 )
 ```
 
 Results can be visualized by plotting the learning curve
@@ -65,12 +66,12 @@ pl.close()
 Delta performance can be directly calculated from the resulting curves
 ```
 # report deltaPerformance 
-print(calc_deltaPerformances(result))
+print(ALSubsampling.calc_deltaPerformances(result))
 ```
 
 Subsampled data can be extracted by calling the subsample_data function
 ```
 # extract AL subsample data
-subsample = subsample_data(model, data, metric, 5)
+subsample = ALSubsampling.subsample_data(model, data, metric, 5)
 ```
 
