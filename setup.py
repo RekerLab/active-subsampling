@@ -31,7 +31,7 @@ setuptools.setup(
         'rdkit',
         'deepchem==2.5.0',
         'tensorflow',
-        'matplotlib==3.1.3',
+        'matplotlib',
     ],
     description='Using active learning for data curation',
     long_description=long_description,
