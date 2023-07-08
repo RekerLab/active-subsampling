@@ -77,7 +77,7 @@ def al_subsampling_with_error(model, dataset, metric, error_rate, num_repeats, t
         learning_s = learning_s[np.invert(training_mask)]
 
         # start active learning process
-        for i in range(len(learning_x)):
+        for j in range(len(learning_x)):
 
             _ = model.fit(training_x, training_y)  # fit the model
 
