@@ -24,6 +24,8 @@ def al_subsampling_with_error(model, dataset, metric, error_rate, num_repeats, t
 		error_rate(float, 0~1): The amount of error  introduced to the
 			 training dataset, defined as the percentage of training dataset with errors.
 		num_repeats(int): Number of repeats to run the pipeline.
+  		train_frac(float, 0~1): The percentage of data used for model training and active learning, the remaining data
+    			 will be used as the test set to monitor model performance.
 		rand(default False): if set to True, the selection strategy would be set to passive learning which
 			 correspond to randomly selecting the data. If False, uncertainty based active learning is used
 
@@ -123,6 +125,8 @@ def al_subsampling(model, dataset, metric, num_repeats, train_frac=0.5, rand=Fal
 			See: https://deepchem.readthedocs.io/en/latest/api_reference/data.html#deepchem.data.Dataset
 		metric: selected model evaluation metric
 		num_repeats(int): Number of repeats to run the pipeline.
+    		train_frac(float, 0~1): The percentage of data used for model training and active learning, the remaining data
+    			 will be used as the test set to monitor model performance.
 		rand(default False): if set to True, the selection strategy would be set to passive learning which
 			 correspond to randomly selecting the data. If False, uncertainty based active learning is used
 
@@ -145,6 +149,8 @@ def al_subsampling_with_errors(model, dataset, metric, error_rates, num_repeats,
 		error_rates(list of floats, 0~1): List of amounts of errors  introduced to the
 			 training dataset, defined as the percentage of training dataset with errors.
 		num_repeats(int): Number of repeats to run the pipeline.
+    		train_frac(float, 0~1): The percentage of data used for model training and active learning, the remaining data
+    			 will be used as the test set to monitor model performance.
 		rand(default False): if set to True, the selection strategy would be set to passive learning which
 			 correspond to randomly selecting the data. If False, uncertainty based active learning is used
 
