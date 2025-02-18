@@ -9,9 +9,9 @@
 
 We use active machine learning as an autonomous and adaptive data subsampling strategy and show that active learning-based subsampling can lead to better molecular machine learning performance when compared to both training models on the complete training data and 19 state-of-the-art subsampling strategies. We find that active learning is robust to errors in the data, highlighting the utility of this approach for low-quality datasets. Taken together, we here describe a new, adaptive machine learning pre-processing approach and provide novel insights into the behavior and robustness of active machine learning for molecular sciences.
 
-For more information, please refer to: [Improving Molecular Machine Learning Through Adaptive Subsampling with Active Learning](https://chemrxiv.org/engage/api-gateway/chemrxiv/assets/orp/resource/item/63e5c76e1d2d18406337135d/original/improving-molecular-machine-learning-through-adaptive-subsampling-with-active-learning.pdf)
+For more information, please refer to: [Improving Molecular Machine Learning Through Adaptive Subsampling with Active Learning](https://pubs.rsc.org/en/content/articlepdf/2023/dd/d3dd00037k)
 
-If you use this data or code, please kindly cite: Wen, Y., Li, Z., Xiang, Y., & Reker, D. (2023). Improving Molecular Machine Learning Through Adaptive Subsampling with Active Learning.
+If you use this data or code, please kindly cite: Wen, Y., Li, Z., Xiang, Y., & Reker, D. (2023). Improving molecular machine learning through adaptive subsampling with active learning. Digital Discovery, 2(4), 1134-1142.
 
 <br>
 
